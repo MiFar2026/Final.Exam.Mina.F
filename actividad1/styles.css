@@ -1,0 +1,219 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff5f8;
+  color: #4a2535;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 8%;
+  background-color: #ffffff;
+  border-bottom: 2px solid #f8bbd0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #c2185b;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #6d3b4e;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.activo {
+  background-color: #fce4ec;
+  color: #c2185b;
+}
+
+/* HEADER */
+.hero {
+  background: linear-gradient(135deg, #f8bbd0 0%, #f48fb1 100%);
+  text-align: center;
+  padding: 5rem 10%;
+  color: #ffffff;
+}
+
+.hero-secundario {
+  padding: 3.5rem 10%;
+}
+
+.hero-content {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 2px 4px rgba(136, 14, 79, 0.2);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #c2185b;
+  color: #ffffff;
+  padding: 0.9rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #880e4f;
+}
+
+/* CONTENIDO PRINCIPAL Y TARJETAS */
+.contenedor {
+  padding: 4rem 8%;
+  text-align: center;
+  flex: 1;
+}
+
+.contenedor h2 {
+  font-size: 2.1rem;
+  color: #ad1457;
+  margin-bottom: 2.5rem;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #f8bbd0;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(233, 30, 99, 0.08);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  color: #c2185b;
+  margin-bottom: 0.8rem;
+  font-size: 1.35rem;
+}
+
+/* IMÁGENES DE PRODUCTOS Y TALLERES (UNIFICADAS AL MISMO TAMAÑO) */
+.img-taller,
+.img-card {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 14px;
+  margin-bottom: 1.2rem;
+  border: 2px solid #f8bbd0;
+}
+
+/* TABLA DE CALENDARIOS Y PRECIOS HECHA CON CSS GRID */
+.grid-tabla {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.1);
+  border: 1px solid #f8bbd0;
+}
+
+.fila-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  align-items: center;
+  padding: 1.1rem 1.5rem;
+  border-bottom: 1px solid #f8bbd0;
+  text-align: left;
+  gap: 1rem;
+}
+
+.fila-header {
+  background-color: #c2185b;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.fila-grid:nth-child(even) {
+  background-color: #fff0f5;
+}
+
+.fila-grid:not(.fila-header):hover {
+  background-color: #fce4ec;
+}
+
+.etiqueta {
+  background-color: #f8bbd0;
+  color: #880e4f;
+  padding: 0.3rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.etiqueta-taller {
+  background-color: #f48fb1;
+  color: #ffffff;
+}
+
+.celda-precio {
+  font-weight: bold;
+  color: #c2185b;
+  font-size: 1.1rem;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #ad1457;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: auto;
+  font-weight: 500;
+}
